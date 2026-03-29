@@ -6,12 +6,12 @@ class Toukan < Formula
 
   on_arm do
     url "https://github.com/bon-clevique/homebrew-tap/releases/download/v2.0.0/toukan-v2.0.0-darwin-arm64.tar.gz"
-    sha256 "b22695a1d761c8c70d946f270bcdf6c2ab96f41557c5b9d56007e69c1c61df3d"
+    sha256 "ce159170cec45bcdb6929e6832db09641d2f2a612ef2aa6c4293d93de50c3add"
   end
 
   on_intel do
     url "https://github.com/bon-clevique/homebrew-tap/releases/download/v2.0.0/toukan-v2.0.0-darwin-x86_64.tar.gz"
-    sha256 "47206d3122cb5ac5754ad2810e153427c608c3350bf4079233e9a2b2bd7ed67c"
+    sha256 "f6cf86fe026183b4a0ed309d6f5596034d25c525fa75501e16d78bf2985a22bf"
   end
 
   def install
