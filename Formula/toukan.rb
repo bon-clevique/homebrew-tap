@@ -1,18 +1,21 @@
 class Toukan < Formula
   desc "Markdown → Notion sync CLI"
   homepage "https://github.com/bon-clevique/Toukan"
-  url "https://github.com/bon-clevique/Toukan/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  version "2.0.0"
   license "MIT"
 
-  depends_on xcode: ["15.0", :build]
-  depends_on macos: :sonoma
+  on_arm do
+    url "https://github.com/bon-clevique/homebrew-tap/releases/download/v2.0.0/toukan-v2.0.0-darwin-arm64.tar.gz"
+    sha256 "b22695a1d761c8c70d946f270bcdf6c2ab96f41557c5b9d56007e69c1c61df3d"
+  end
+
+  on_intel do
+    url "https://github.com/bon-clevique/homebrew-tap/releases/download/v2.0.0/toukan-v2.0.0-darwin-x86_64.tar.gz"
+    sha256 "47206d3122cb5ac5754ad2810e153427c608c3350bf4079233e9a2b2bd7ed67c"
+  end
 
   def install
-    cd "CLI" do
-      system "swift", "build", "-c", "release", "--disable-sandbox"
-      bin.install ".build/release/toukan"
-    end
+    bin.install "toukan"
   end
 
   test do
