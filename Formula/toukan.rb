@@ -16,6 +16,14 @@ class Toukan < Formula
 
   def install
     bin.install "toukan"
+
+    # Generate shell completions
+    output = Utils.safe_popen_read(bin/"toukan", "--generate-completion-script", "zsh")
+    (zsh_completion/"_toukan").write output
+    output = Utils.safe_popen_read(bin/"toukan", "--generate-completion-script", "bash")
+    (bash_completion/"toukan").write output
+    output = Utils.safe_popen_read(bin/"toukan", "--generate-completion-script", "fish")
+    (fish_completion/"toukan.fish").write output
   end
 
   test do
