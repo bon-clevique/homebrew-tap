@@ -5,19 +5,18 @@ class Toukan < Formula
   license "MIT"
 
   on_arm do
-    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.0.1/toukan-v2.0.1-darwin-arm64.tar.gz"
-    sha256 "d20e4af5f0bd34367725e5af521771e5ccf3d222e4e6a9e3a03977ce279d868a"
+    url "https://github.com/bon-clevique/Toukan/releases/download/v2.0.1/toukan-v2.0.1-darwin-arm64.tar.gz"
+    sha256 "51989985c60b8fbf95cac8114c0544edebe0c496eab1bdede1ca47bc779cd27c"
   end
 
   on_intel do
-    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.0.1/toukan-v2.0.1-darwin-x86_64.tar.gz"
-    sha256 "f52146a02fc36a39144cc4733e2771f876e632f7d522b7e2e9fac5215619c414"
+    url "https://github.com/bon-clevique/Toukan/releases/download/v2.0.1/toukan-v2.0.1-darwin-x86_64.tar.gz"
+    sha256 "64991661720c91d7548fd5d768c7acded97023538334d00367ad769375c40570"
   end
 
   def install
     bin.install "toukan"
 
-    # Generate shell completions
     output = Utils.safe_popen_read(bin/"toukan", "--generate-completion-script", "zsh")
     (zsh_completion/"_toukan").write output
     output = Utils.safe_popen_read(bin/"toukan", "--generate-completion-script", "bash")
