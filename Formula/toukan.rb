@@ -1,17 +1,17 @@
 class Toukan < Formula
   desc "Markdown → Notion sync CLI"
   homepage "https://github.com/bon-clevique/Toukan"
-  version "2.0.0"
+  version "2.0.1"
   license "MIT"
 
   on_arm do
-    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.0.0-final/toukan-v2.0.0-darwin-arm64.tar.gz"
-    sha256 "9db4cb70e0fe9b7e95deefedb36b81640b3c6c7c311b3d3163172144e18f4c90"
+    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.0.1/toukan-v2.0.1-darwin-arm64.tar.gz"
+    sha256 "d20e4af5f0bd34367725e5af521771e5ccf3d222e4e6a9e3a03977ce279d868a"
   end
 
   on_intel do
-    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.0.0-final/toukan-v2.0.0-darwin-x86_64.tar.gz"
-    sha256 "47781a6a59758a896fcbebf25813a2aea3ff5648c223448353b72078fca955e1"
+    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.0.1/toukan-v2.0.1-darwin-x86_64.tar.gz"
+    sha256 "f52146a02fc36a39144cc4733e2771f876e632f7d522b7e2e9fac5215619c414"
   end
 
   def install
@@ -28,5 +28,6 @@ class Toukan < Formula
 
   test do
     assert_match "Markdown", shell_output("#{bin}/toukan --help")
+    assert_match version.to_s, shell_output("#{bin}/toukan --version")
   end
 end
