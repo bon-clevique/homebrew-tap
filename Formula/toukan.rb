@@ -1,17 +1,17 @@
 class Toukan < Formula
   desc "Markdown → Notion sync CLI"
   homepage "https://github.com/bon-clevique/Toukan"
-  version "2.2.6"
+  version "2.3.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.2.6/toukan-v2.2.6-darwin-arm64.tar.gz"
-    sha256 "2e6d60dc7b8aefc341a0ccaa4df9aba5c15022c421cb266790093271964df66d"
+    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.3.0/toukan-v2.3.0-darwin-arm64.tar.gz"
+    sha256 "8c92e80d5c3b507c9cd36b7f65f20191f68ed391f866a03384ef797601dbf319"
   end
 
   on_intel do
-    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.2.6/toukan-v2.2.6-darwin-x86_64.tar.gz"
-    sha256 "feefaa9dc9d352a698497f7d51bebc70182111e865c60a070793a766ad90ab77"
+    url "https://github.com/bon-clevique/homebrew-tap/releases/download/cli-v2.3.0/toukan-v2.3.0-darwin-x86_64.tar.gz"
+    sha256 "a2fc51a64cfed4004cf27abd9ea3ddcf1fa66e24324146ac9fcbeed1dad6cc3a"
   end
 
   def install
